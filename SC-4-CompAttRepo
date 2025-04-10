@@ -1,0 +1,44 @@
+Encontrando branches
+	git
+		fetch -a -  Encontramos todos os branchs e tags que ainda não estão reconhecidas no pc local
+
+		Caso já estejamos no branch é só dar um push para puxarmos a atualização mais recente
+
+		Reforçando
+		Pull na branch main -> criação da branch -> commit na branch e push -> estando na branch main fazemos o merge das branchs filhas
+
+Enviando alterações
+	git 
+		push - para ser enviado ao repo os aruivos precisam ser adicionados com add para serem trackeados e por fim criarmos o commit -a -m "{{ msg }}" para podermos dar push		
+		
+		Reforçando 
+		git add {{ arq ou . (tudo) }} -> git commit -a -m "{{ msg }}" -> git push
+ 
+		- Arquivos que não foram adicionados estarão como untracked e não serão enviados
+		- As modificações precisam estar dentro de um ou mais commits para serem enviadas
+
+Utilizando o remote
+	git 
+		remote -v - Traz os remotes de fetch e push
+		remote rm origin - remove o remote da origem
+		remote add {{ url do repo }} - adiciona remote origin do repo
+
+Submodules
+	
+	- Submodulo é a maneira que temos de possuir dois ou mais projets em um só repositório
+	- Podemos adicionar uma dependencia ao nosso projeto atual, porém mantendo suas estruturas separadas
+	
+	git 
+		submodule - Vemos quais submodulos o repo tem
+		submodule add {{ url do repo }} {{ nome }} - Adiciona o submodulo ao repo
+		
+	- Submodulos ficam dentro do repositorio que foram adicionadas e podem ser alteradas dentro desses repositorios
+	
+	push --recursive-submodules=on-demand - As atualizações contidas dentro do submodulo do repositorio são enviadas ao repositorio do submodulo para serem atualizadas
+	
+	Reforçando
+	Repo(Projeto) recebe um submodulo biblioteca que também é um repositorio -> é feito atualizações no repo(Projeto) que modificam essa biblioteca ->
+	Atualizamos essa biblioteca (push) dentro do repo(Projeto) -> enviamos essa atualização ao repo(Biblioteca) com o comando acima.
+
+	
+		

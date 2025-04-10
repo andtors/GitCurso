@@ -1,0 +1,46 @@
+Comandos
+	git
+		init - iniciamos o repo na pasta atual
+
+		status - verificamos se há ou não um repo na pasta e se houver traz arquivos ou commits pendentes
+			Mensagens:
+			not staged for commit - Arquivos já no repo porém que foram modificados
+			untracked files - Arquivos que não estão no repo			
+
+		add 
+			{{ arquivo/dir }} - Adiciona um arquivo ou diretorio especifico
+			. - Adiciona todos os arquivos a serem commitados
+			
+		commit 
+			-m "{{ msg do commit }}" - Criamos o commit e sua mensagem, enviamos todos os arquivos pendentes, -m significa que irá ter uma mensagem
+			{{ arq }} -m "{{ msg do commit }} - Enviamos apenas um arquivo
+			-a -m "{{ msg do commit }}" - Enviamos todos os arquivos alterados
+			
+ 
+		branch -M main - Ramificação principal do repositorio, onde o código correto está //Apenas na criação do repo
+
+		remote add origin {{ url do repo }} - Origem do repo onde iremos commitar ou clonar //Apenas na criação do repo ou caso venhamos a remover e precisamos atualizar
+
+		push -u origin main - Estamos commitando no repo de origem //Apenas na criação do repo
+			push - Estamos fazendo 1 ou mais commits ao repo
+		
+		remote -v - Qual a origem do repo atual
+		rm origin - Removemos o repo atual
+
+		ATENÇÃO - A partir de 2021 para commitarmos em um repositorio somos obrigados à informar nosso usuario e token criado no github!
+
+		pull - Atualizamos o repo da maquina local
+
+		clone {{ url repo }} {{ dir }}- Clonamos todo o repo no github para a maquina local
+		
+		rm {{ arq/dir }} - Deletamos um arquivo ou diretorio de ser monitorado pelo git
+
+		log - Traz um historico de commits realizados no projeto até então
+
+		mv {{ arq }} {{ dir }} - Move o arq para  diretorio indicado
+	
+		mv {{ arq }} {{ novoNome }} - Renomeia o nome do arquivo
+
+		checkout {{ arq }} - Remove a alteração do arquivo que foi alterado e volta ao seu estado original
+
+		reset --hard origin/master - Ignora todas as alterações e reseta para o estado original que está no github    

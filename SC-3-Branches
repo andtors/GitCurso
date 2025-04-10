@@ -1,0 +1,34 @@
+Branch 
+	- É uma ramificação do projeto, cada dev terá o seu
+	- Após a finalização os branchs são unidos para ter o código-fonte final
+
+Comandos 
+	git
+		branch - Retorna todos os branchs criados no projeto
+		branch  {{ nome }} - Cria um novo branch, sempre criar do main
+		branch -d ou --delete {{ branch nome }} - Deleta o branch, não é comum
+		checkout -b {{ branch nome  }} -  Alteramos de branch, porém cuidado! levamos modificações a esse novo branch, antes de mudarmos temos que commitarmos
+		
+		- sair do branch commitando tudo antes -> voltar para a main -> pull na main -> criar novo branch a partir da main
+
+		- Estando na branch main, devemos dar merge nas branches "filhas" que já estão commitadas		
+		
+		merge {{ branch filha }} - Mescla a branch atual (quase sempre a main) a branch filha (após isso push)
+		merge main - Mesclamos nossa branch atual com a main para atualizarmos o código
+		
+		stash - Tudo alterado é desfeito e é jogado na 'lixeira' podemos recuperar
+		stash list - Retorna as stash criadas e seus id's
+		stash apply {{ id }} - Traz as alterações da stash selecionada
+		stash show -p {{ id }} - Retorna as modificações feitas na stash selecionada
+		stash clear - Limpamos toda a lista de stash's criadas
+		stash drop {{ id }} - Removemos a stash selecionada
+
+		tag -a {{ branch nome }} -m "{{ msg }}"
+			- Serve para criarmos "checkpoints" para branches muito grandes
+		tag - Traz a lista de tags criadas
+		checkout {{ nome tag }} - Avança ou retrocede o código para a tag selecionada
+		
+		push origin {{ nome tag }} - Envia uma tag para o repo
+		push origin --tags - Enviamos todas as tags para o repo
+
+
