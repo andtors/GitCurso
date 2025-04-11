@@ -1,0 +1,11 @@
+Comandos
+	git
+		clean - vai verificar arquivos que não estão sendo trackeados e removelos
+		
+		gc -  garbage collector, indentifica arquivos não utilizados e deleta eles para melhorar a performance
+
+		fsck - faz a verificação de integridade de arquivos
+		
+		reflog - mostra todas as alterações feitas pelo usuario no git
+
+		archive --format zip --output {{ nome }}.zip main - transforma o repo local em zip
