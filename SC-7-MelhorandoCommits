@@ -1,0 +1,39 @@
+Melhorando commits
+	- Gits sem sentido atrapalham o projeto
+	- É preciso padronizar para saber através de logs facilmente o que foi feito
+
+Para evitar que commitemos coisas desnecessarias iremos criar private branchs
+	checkout -b private_func_a - criamos uma branch da branch com o nome private
+	rebase {{ branch privada }} - todos os commits feitos na branch privada serão mescladas a branch principal ( que não é a main )
+		i - para interagir
+		pick - usaremos o commit
+		squash - usaremos o commit mas mesclaremos ao anterior
+		reword - usaremos o commit mas renomearemos
+		:x! - prossegue
+	
+	Após isso iremos configurar os commits e suas mensagems
+		caso tenhamos escolhido para mesclar um commit ao anterior colocamos # para deletar a mensagem	
+		:x! - prossegue
+		caso tenhamos escolhido reword mudamos de nome
+		:x!
+
+	Reforçando
+		Criamos um branch derivado da main para oo que iremos desenvolver ->
+		Dessa branch iremos criar uma private para fazermos diversos commits ->
+		Depois de terminado o trabalho na private branch iremos mesclar ao branch criado anteriormente ->
+		Com o comando rebase e sua interface iremos escolher o que fazer com cada commit feito na private ->
+		Finalizado o rebase, podemos commitar as alterações na branch derivado da main e fazer um push
+
+Boas mensagens de commit
+	- Separar assunto do corpo da mensagem
+	- Assunto com no maximo 50 carac
+	- Assunto com letra inicia Maiuscula
+	- Corpo sempre se inciando com letra minuscula para diferenciarmos o que é o assunto e o que corpo
+	- Corpo com maximo de 72 carac
+	- Explicar o por que e como do commit, e não como o código foi escrito
+
+
+
+
+
+
