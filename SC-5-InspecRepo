@@ -1,0 +1,10 @@
+Comandos
+	git
+		show - mostra as branchs
+		tags - mostra as tags do repo
+		
+		diff - mostra as diferenças da branch atual com a branch main
+		diff {{ branch1 }} {{ branch2 }} - mostra as diferenças de um branch com outro
+		diff {{ arq1 }} {{ arq2}} - mostra as diferenças de um arquivo com o outro
+
+		shortlog - dá um log resumido do projeto
