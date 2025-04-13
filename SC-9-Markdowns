@@ -1,0 +1,36 @@
+Markdowns tags utilizados em readme
+	# -> h1
+	## -> h2
+	###... -> h3, h4, h5...
+	
+	** {{ msg }} ** -> negrito
+	* {{ msg }} * -> italico
+	__{{ msg }}__ -> negrito
+
+	* {{ msg }} -> lista
+	* {{ msg }} -> lista
+	* {{ msg }} -> lista
+
+	1. {{ msg }} -> lista enumerada
+	2. {{ msg }} -> lista enumerada
+	3. {{ msg }} -> lista enumerada
+		I. {{ msg }}
+		II. {{ msg }} -> lista enumerada aninhada
+		III. {{ msg }}
+
+	![Logo imagem]({{ path da img  }}) -> inserção de imagem local
+
+	![Logo imagem]({{ url imagem }}) -> imagem externa
+
+	[Texto do link]({{url}}) -> inserção de link
+	
+	[![Logo imagem]({{ url imagem }})] {{ url link }} -> inserindo link em uma imagem
+
+	```{{ linguagem }}
+	 {{ Código ... }} -> código da linguagem especificada anteriormente
+	```
+
+	- [x] {{ tarefa1 }}
+	- [] {{ tarefa2 }} -> checkbox false ou true para tarefas
+	- [] {{ tarefa3 }} 
+	
